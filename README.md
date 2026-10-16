@@ -4,7 +4,7 @@ An enterprise-grade, explainable security monitoring application built for moder
 
 ---
 
-## 🌟 Key Capabilities
+## Key Capabilities
 
 - **Multi-Format Ingestion**: Ingests JSON (single alert or array) and CSV data with robust normalization, tolerant parsing of disparate field names, and row-level error isolation.
 - **Idempotency & Deduplication**: Cryptographic event fingerprinting (`SHA-256`) eliminates duplicate alerts and prevents duplicate incident creation.
@@ -18,7 +18,7 @@ An enterprise-grade, explainable security monitoring application built for moder
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Python**: 3.11+
 - **REST API**: FastAPI + Uvicorn
@@ -33,7 +33,7 @@ An enterprise-grade, explainable security monitoring application built for moder
 ## Deployment link1 https://security-alert-triage-and-incident-c0f1.onrender.com/docs
  
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### 1. Prerequisites
 - Python 3.11+ installed (`python --version` or `py -3.11 --version`)
@@ -105,7 +105,7 @@ curl -X POST "http://127.0.0.1:8000/api/v1/alerts/ingest/json" \
 
 ---
 
-## 📊 Explainable Prioritization Breakdown
+## Explainable Prioritization Breakdown
 
 The scoring engine calculates an incident score between `0.0` and `100.0` through deterministic summation:
 
@@ -138,7 +138,7 @@ The scoring engine calculates an incident score between `0.0` and `100.0` throug
 
 ---
 
-## 🛡️ Security & Reliability Controls
+## Security & Reliability Controls
 
 - **Forensic Immutability**: Raw alert payloads are preserved unmodified as JSON for legal and forensic compliance.
 - **Audit Trails**: Every incident status transition generates an immutable `IncidentStatusHistoryModel` entry containing the previous status, new status, analyst identity, timestamp, and rationale.
