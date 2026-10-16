@@ -84,19 +84,7 @@ Open your browser to `http://localhost:8501`.
 
 ---
 
-## 📡 REST API Reference
 
-| Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `/api/v1/health` | `GET` | Health status, DB connection, total alerts and active incidents |
-| `/api/v1/alerts/ingest/json` | `POST` | Ingest single alert or batch JSON array |
-| `/api/v1/alerts/ingest/csv` | `POST` | Ingest alerts via CSV file upload or `raw_csv` parameter |
-| `/api/v1/alerts` | `GET` | Paginated query of alerts (filter by source, severity, host, user) |
-| `/api/v1/alerts/{alert_id}` | `GET` | Full alert details including original untampered `raw_payload` |
-| `/api/v1/incidents` | `GET` | Paginated query of incidents (filter by status, priority, search) |
-| `/api/v1/incidents/{incident_id}` | `GET` | Incident details, score breakdown, supporting alerts, and evidence |
-| `/api/v1/incidents/{incident_id}/status` | `PATCH` | Transition incident status (`status`, `notes`, `analyst`) |
-| `/api/v1/incidents/{incident_id}/analyze`| `POST` | Trigger deterministic or LLM evidence synthesis |
 
 ### Ingestion Example (cURL)
 ```bash
