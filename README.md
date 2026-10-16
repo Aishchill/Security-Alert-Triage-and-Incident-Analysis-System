@@ -30,64 +30,7 @@ An enterprise-grade, explainable security monitoring application built for moder
 
 ---
 
-## 📂 Repository Structure
-
-```
-first1/
-├── app/
-│   ├── config.py                 # System settings, scoring weights, and thresholds
-│   ├── database.py               # SQLAlchemy SQLite engine (WAL mode) and sessionmaker
-│   ├── models/                   # SQLAlchemy ORM database models
-│   │   ├── alert.py              # AlertModel (normalized alerts + raw_payload)
-│   │   ├── incident.py           # IncidentModel, IncidentAlertModel, StatusHistory
-│   │   └── summary.py            # IncidentEvidenceSummaryModel
-│   ├── schemas/                  # Pydantic validation and serialization models
-│   │   ├── alert.py              # CanonicalAlert, RawAlertInput, IngestResult
-│   │   ├── incident.py           # IncidentRead, IncidentDetailRead, StatusUpdate
-│   │   ├── scoring.py            # PrioritizationResult, ScoreFactorBreakdown
-│   │   └── analysis.py           # StructuredIncidentAnalysis, TimelineEvent
-│   ├── ingestion/                # Ingestion handlers
-│   │   ├── normalizer.py         # Record validation and error isolation
-│   │   ├── json_ingest.py        # JSON parsing (single object or list)
-│   │   └── csv_ingest.py         # CSV reader with row-by-row error tracking
-│   ├── correlation/              # Event correlation engine
-│   │   ├── rules.py              # Host, User, IOC pivot rules & time window checks
-│   │   └── engine.py             # Incident clustering and batch association
-│   ├── scoring/                  # Deterministic prioritization engine
-│   │   └── engine.py             # Severity, confidence, asset, and chain scoring
-│   ├── analysis/                 # Incident analysis & timeline builder
-│   │   ├── timeline.py           # Chronological timeline builder
-│   │   ├── synthesizer.py        # Deterministic fact/hypothesis separator
-│   │   └── llm_analyzer.py       # Grounding validator & prompt injection defanging
-│   ├── services/                 # Business logic services
-│   │   ├── alert_service.py      # Alert queries and deduplicated persistence
-│   │   └── incident_service.py   # Incident triage lifecycle and analysis
-│   ├── api/                      # FastAPI REST application
-│   │   ├── app.py                # FastAPI factory and middleware
-│   │   └── routes/
-│   │       ├── alerts.py         # Alert ingestion and query routes
-│   │       ├── incidents.py      # Incident triage, detail, and analysis routes
-│   │       └── health.py         # Health check and telemetry metrics
-│   └── dashboard/
-│       └── app.py                # Streamlit SOC analyst interface
-├── data/
-│   └── synthetic_alerts.json     # Synthetic test alerts (multi-stage attack scenarios)
-├── tests/
-│   ├── conftest.py               # In-memory SQLite fixtures and sample payloads
-│   ├── test_ingestion.py         # Validation, normalizer, and CSV/JSON tests
-│   ├── test_deduplication.py     # Deduplication hash & idempotent storage tests
-│   ├── test_correlation.py       # Sliding time window and pivot grouping tests
-│   ├── test_scoring.py           # Deterministic prioritization & breakdown tests
-│   ├── test_analysis.py          # Timeline, facts vs hypotheses, grounding tests
-│   ├── test_api.py               # FastAPI TestClient endpoint integration tests
-│   └── test_dashboard.py         # End-to-end synthetic scenario loading test
-├── ARCHITECTURE.md               # Architecture document, threat model, and schema
-├── main.py                       # Unified CLI runner (api, dashboard, seed, test)
-├── requirements.txt              # Production and test dependencies
-└── pytest.ini                    # Pytest configuration
-```
-
----
+## Deployment link https://security-alert-triage-and-incident-c0f1.onrender.com
 
 ## 🚀 Quickstart Guide
 
