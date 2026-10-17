@@ -1,0 +1,30 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Logs & Temporary files
+*.log
+*.tmp
+
+# Streamlit local credentials
+.streamlit/secrets.toml
+
+# IDE configuration
+.idea/
+.DS_Store
