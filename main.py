@@ -43,6 +43,7 @@ def run_api(host: str = "0.0.0.0", port: int = 8000, reload: bool = False):
     """Start the FastAPI REST API server."""
     print(f"[*] Starting Security Triage REST API on port {port}")
     print(f"[*] OpenAPI Documentation available at:")
+    
     print(f"    - http://127.0.0.1:{port}/docs")
     print(f"    - http://localhost:{port}/docs")
     uvicorn.run("app.api.app:app", host=host, port=port, reload=reload)
