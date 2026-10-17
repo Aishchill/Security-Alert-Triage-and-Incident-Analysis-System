@@ -1,0 +1,11 @@
+[project]
+name = "security-alert-triage"
+version = "0.1.0"
+description = "Security Alert Triage and Incident Analysis System"
+requires-python = ">=3.10"
+dependencies = [
+    # list your core python dependencies here, or leave empty if using requirements.txt
+]
+
+[tool.vercel]
+entrypoint = "app.api:app"
